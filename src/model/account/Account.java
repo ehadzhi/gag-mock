@@ -3,30 +3,45 @@ package model.account;
 import model.IKernel;
 import model.Kernel;
 import model.Votable;
+import model.comment.Comment;
 import model.post.Post;
+import model.section.ISection;
 
 public class Account extends Kernel implements IAccount {
 	// TODO field : file avatar profile picture
 	private String userName;
-	private String password;
+	private String password; // very bad :D
 	private String eMail;
 	private boolean showNSFWPosts;
 	private boolean genderMale;
-	private Post[] commentedPosts;
-	private Post[] votedPosts;
-	
+	private ISection commentedPosts;
+	private ISection votedPosts;
+
 	@Override
 	public boolean upVote(Votable toUpVote) {
-		// TODO Auto-generated method stub
+		if (toUpVote != null) {
+			toUpVote.upVote();
+			if (toUpVote instanceof Post) {
+				// TODO add Post to voted
+			}
+			return true;
+		}
 		return false;
-		
 	}
+
 	@Override
 	public boolean downVote(Votable toDownVote) {
-		// TODO Auto-generated method stub
+		if (toDownVote != null) {
+			toDownVote.downVote();
+			if (toDownVote instanceof Post) {
+				// TODO add Post to voted
+			}
+			return true;
+		}
 		return false;
-		
+
 	}
+
 	@Override
 	public boolean deleteMe(IAccount whoDeletesMe) {
 		// TODO Auto-generated method stub
@@ -35,7 +50,9 @@ public class Account extends Kernel implements IAccount {
 
 	@Override
 	public boolean deleteMyCreation(IKernel toDelete) {
-		// TODO Auto-generated method stub
+		if (toDelete != null) {
+			return toDelete.deleteMe(this);
+		}
 		return false;
 	}
 

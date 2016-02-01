@@ -8,7 +8,4 @@ public interface IComment extends IKernel {
 	String getMessage();
 	
 	IPost getOriginPost();
-	
-	boolean delete();
-
 }

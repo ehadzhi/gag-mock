@@ -1,16 +1,19 @@
 package model.post;
 
+import java.util.Iterator;
+
 import model.IKernel;
 import model.account.IAccount;
 import model.comment.IComment;
+import model.comment.ICommentList;
 
 public interface IPost extends IKernel {
 	
-	// getComments
-	
-	void comment(IComment toAdd);
+	Iterator<ICommentList> getCommentsIterator();
 	
 	boolean delete();
 	
-	void comment(IAccount commenter,IComment toAdd);
+	void addComment(IAccount commenter,IComment toAdd);
+	
+	int getID();
 }
