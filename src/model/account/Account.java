@@ -6,12 +6,15 @@ import model.Votable;
 import model.comment.Comment;
 import model.post.Post;
 import model.section.ISection;
+import model.string.EMail;
+import model.string.PassWord;
+import model.string.UserName;
 
 public class Account extends Kernel implements IAccount {
 	// TODO field : file avatar profile picture
-	private String userName;
-	private String password; // very bad :D
-	private String eMail;
+	private UserName userName; 			
+	private PassWord password; 			
+	private EMail eMail;				
 	private boolean showNSFWPosts;
 	private boolean genderMale;
 	private ISection commentedPosts;
