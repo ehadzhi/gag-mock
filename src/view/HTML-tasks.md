@@ -8,6 +8,6 @@
 - [ ] Post page - http://9gag.com/gag/a77wpwb
 - [x] Login - modal pop-up
 - [x] Sign up - modal pop-up
-- [ ] 404 page not found - pretty error page
+- [x] 404 page not found - pretty error page
 - [ ] User profile page
 - [ ] User settings page
