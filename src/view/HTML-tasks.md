@@ -9,3 +9,5 @@
 - [x] Login - modal pop-up
 - [x] Sign up - modal pop-up
 - [ ] 404 page not found - pretty error page
+- [ ] User profile page
+- [ ] User settings page
