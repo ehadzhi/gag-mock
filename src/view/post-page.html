@@ -71,55 +71,136 @@
 
 
   <div class="container">
-      <div class="col-lg-7 col-md-7 col-sm-12">
-        <h1>Title</h1>
-        <button type="button" class="btn btn-link btn-xs">Points</button>
-        <button type="button" class="btn btn-link btn-xs">Comments</button>
-        <p></p>
-        <div class="btn-group" role="group" aria-label="...">
+    <div class="col-lg-7 col-md-7 col-sm-12">
+      <h1>Title</h1>
+      <button type="button" class="btn btn-link btn-xs">Points</button>
+      <button type="button" class="btn btn-link btn-xs">Comments</button>
+      <p></p>
+      <div class="btn-group" role="group" aria-label="...">
         <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
         <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></button>
-        </div>
-        <button type="button" class="btn btn btn-primary ">Facebook</button>
-        <button type="button" class="btn btn btn-info">Twitter</button>
-
-        <div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Google+</a></li>
-            <li><a href="#">Pintrest</a></li>
-            <li><a href="#">E-mail</a></li>
-          </ul>
-        </div>
-        <button type="button" class="btn pull-right btn-danger">Next Post</button>
-        <p></p>
-        <img src="media\DrMittens.jpg" class="img-responsive" alt="img">
-        <p></p>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <button type="button" class="btn btn-primary btn-lg btn-block">Share on Facebook</button>          
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <button type="button" class="btn btn-info btn-lg btn-block">Share on Twitter</button>          
-        </div>            
-        <hr></hr>    
-        <button type="button" class="btn pull-right btn-link btn-xs">Report</button>
-        
       </div>
+      <button type="button" class="btn btn btn-primary ">Facebook</button>
+      <button type="button" class="btn btn btn-info">Twitter</button>
 
-      
-
-    <div class="col-lg-4 col-md-4 col-sm-12">
-      <div class=" affix col-lg-4 col-md-4 col-sm-12">
-      <h1> Sidebar</h1>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Google+</a></li>
+          <li><a href="#">Pintrest</a></li>
+          <li><a href="#">E-mail</a></li>
+        </ul>
       </div>
-    </div>  
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-</body>
-</html>
+      <button type="button" class="btn pull-right btn-danger">Next Post</button>
+      <p></p>
+      <img src="media\DrMittens.jpg" class="img-responsive" alt="img">
+      <p></p>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Share on Facebook</button>          
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <button type="button" class="btn btn-info btn-lg btn-block">Share on Twitter</button>          
+      </div>            
+      <hr></hr>    
+      <button type="button" class="btn pull-right btn-link btn-xs">Report</button>
+
+
+
+    </div>
+
+    <div class="container">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <h1>Comment Section</h1>
+        <div class="form-group container-fluid">
+          
+          <form action="/html/tags/html_form_tag_action.cfm" method="post">
+            <label for="comment">Comment:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+            <input type="submit" value="Submit">
+
+          </form>
+        </div>
+
+        <div class="container-fluid">
+          <h1>
+            <img src="media\profile-pic.jpg" class="col-lg-3 col-md-3 col-sm-3">
+            <p style="font-size:47%"><strong>username</strong>
+             <small>300 points 3 m</small></p>
+             <p style="font-size:47%">comment</p>
+             <p style="font-size:47%">Like Dislike Reply</p>
+
+             <h2>
+              <img src="media\profile-pic.jpg" class="col-lg-2 col-md-2 col-sm-2">
+              <p style="font-size:47%"><strong>username</strong>
+                <small>300 points 3 m</small></p>
+                <p style="font-size:47%">comment</p>
+                <p style="font-size:47%">Like Dislike Reply</p>
+              </h2>
+
+            </h1>
+          </div>
+
+          <div class="container-fluid">
+            <h1>
+              <img src="media\profile-pic.jpg" class="col-lg-3 col-md-3 col-sm-3">
+              <p style="font-size:47%"><strong>username</strong>
+               <small>300 points 3 m</small></p>
+               <p style="font-size:47%">comment</p>
+               <p style="font-size:47%">Like Dislike Reply</p>
+
+               <h2>
+                <img src="media\profile-pic.jpg" class="col-lg-2 col-md-2 col-sm-2">
+                <p style="font-size:47%"><strong>username</strong>
+                  <small>300 points 3 m</small></p>
+                  <p style="font-size:47%">comment</p>
+                  <p style="font-size:47%">Like Dislike Reply</p>
+                </h2>
+
+              </h1>
+
+            </div>
+
+            <div class="container-fluid">
+              <h1>
+                <img src="media\profile-pic.jpg" class="col-lg-3 col-md-3 col-sm-3">
+                <p style="font-size:47%"><strong>username</strong>
+                  <small>300 points 3 m</small></p>
+                  <p style="font-size:47%">comment</p>
+                  <p style="font-size:47%">Like Dislike Reply</p>
+                </h1>
+              </div>
+
+              <div class="container-fluid">
+                <h1>
+                  <img src="media\profile-pic.jpg" class="col-lg-3 col-md-3 col-sm-3">
+                  <p style="font-size:47%"><strong>username</strong>
+                    <small>300 points 3 m</small></p>
+                    <p style="font-size:47%">comment</p>
+                    <p style="font-size:47%">Like Dislike Reply</p>
+                  </h1>
+                </div>
+
+
+
+              </div>
+
+
+
+
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class=" affix col-lg-4 col-md-4 col-sm-12">
+                  <h1> Sidebar</h1>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+              </div>  
+
+
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <!-- Latest compiled and minified JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+          </body>
+          </html>
