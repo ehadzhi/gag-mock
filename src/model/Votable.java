@@ -2,7 +2,7 @@ package model;
 
 public interface Votable extends IKernel {
 	
-	int getScore();
+	int getPoints();
 	
 	boolean upVote();
 	

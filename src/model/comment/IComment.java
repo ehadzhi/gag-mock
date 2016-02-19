@@ -1,11 +1,8 @@
 package model.comment;
 
-import model.IKernel;
-import model.post.IPost;
-
-public interface IComment extends IKernel {
+public interface IComment {
 	
 	String getMessage();
 	
-	IPost getOriginPost();
+	void deleteMe();
 }

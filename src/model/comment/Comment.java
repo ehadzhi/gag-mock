@@ -3,25 +3,24 @@ package model.comment;
 import java.time.LocalDateTime;
 
 import model.Kernel;
+import model.Votable;
 import model.account.IAccount;
 import model.post.IPost;
 
-public class Comment extends Kernel implements IComment {
+public class Comment extends Kernel implements IComment,Votable {
 	private static final int MAX_COMMENT_LENGTH = 140;
-	private LocalDateTime dateTimeOfCreation;
 	private IPost writtenOn;
 	private String commentString;
 	private int points;
 
-	public Comment(IAccount creator, IPost writtenOn, String commentString) {
-		super(creator);
+	public Comment(IPost writtenOn,String commentString) throws CommentException {
 		if (writtenOn != null && validComment(commentString)) {
-			this.dateTimeOfCreation = LocalDateTime.now();
 			this.writtenOn = writtenOn;
 			this.commentString = commentString;
 			this.points = 0;
 		}
-		// TODO exception
+		throw new CommentException("Invalid comment creation prameters: "
+				+ "Post written on= " + writtenOn + ", comment= " + commentString);
 	}
 
 	private static boolean validComment(String toCheck) {
@@ -39,13 +38,24 @@ public class Comment extends Kernel implements IComment {
 	}
 
 	@Override
-	public IPost getOriginPost() {
-		return writtenOn;
+	public void deleteMe() {
+		// TODO Auto-generated method stub
 	}
 
 	@Override
-	public boolean deleteMe(IAccount whoDeletesMe) {
+	public int getPoints() {
+		return points;
+	}
+
+	@Override
+	public boolean upVote() {
 		// TODO Auto-generated method stub
-		return super.deleteMe(whoDeletesMe);
+		return false;
+	}
+
+	@Override
+	public boolean downVote() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
