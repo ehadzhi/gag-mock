@@ -7,13 +7,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/index.html")
-public class IndexServlet extends HttpServlet {
+@WebServlet("/navigate")
+public class NavigateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getSession().setAttribute("currentpage", "hot");
+		String toNavigateTo = request.getParameter("active_page");
+		request.getSession().setAttribute("currentpage", toNavigateTo);
 		response.sendRedirect("/gagmock/main.jsp");
 	}
 

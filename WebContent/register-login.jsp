@@ -11,13 +11,13 @@
 				<div class="modal-body">
 					<form class="form-signup" action="/gagmock/register" method="post">
 						<h2 class="form-signup-heading">Please sign up</h2>
-						<label for="inputEmail" class="sr-only">Email address</label> <input
+						<label for="exampleInputEmail1">Email address</label> <input
 							type="email" name="email" id="inputEmail" class="form-control"
 							placeholder="Email address" required autofocus> <label
-							for="userName" class="sr-only">Username</label> <input
+							for="formGroupExampleInput">Username</label> <input
 							type="userName" name="username" id="inputUsername"
 							class="form-control" placeholder="Username" required autofocus>
-						<label for="inputPassword" class="sr-only">Password</label> <input
+						<label for="exampleInputPassword1">Password</label> <input
 							type="password" name="password" id="inputPassword"
 							class="form-control" placeholder="Password" required>
 						<div class="checkbox"></div>
@@ -36,10 +36,10 @@
 				<div class="modal-body">
 					<form class="form-signin" action="/gagmock/login" method="post">
 						<h2 class="form-signin-heading">Please log in</h2>
-						<label for="inputEmail" class="sr-only">Email address</label> <input
+						<label for="exampleInputEmail1">Email address</label> <input
 							type="email" name="email" id="inputEmail" class="form-control"
 							placeholder="Email address" required autofocus> <label
-							for="inputPassword" class="sr-only">Password</label> <input
+							for="exampleInputPassword1">Password</label> <input
 							type="password" name="password" id="inputPassword"
 							class="form-control" placeholder="Password" required>
 						<div class="checkbox">

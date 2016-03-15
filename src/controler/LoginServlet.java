@@ -13,17 +13,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import info.Info;
 import jdbc.ConnectionSingleton;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
-	private static final String SELECT_PASS = "select account_id,password from account where email = ?;";
+	private static final String SELECT_PASS = "select account_id,"
+			+ "password,username from account where email = ?;";
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String email = request.getParameter("email");
-		String password = request.getParameter("password");
+		String email = request.getParameter(Info.EMAIL_LABEL);
+		String password = request.getParameter(Info.PASSWORD_LABEL);
 		HttpSession session = request.getSession();
 		Connection conn = ConnectionSingleton.getConnection();
 
@@ -31,14 +33,15 @@ public class LoginServlet extends HttpServlet {
 			PreparedStatement stmnt = conn.prepareStatement(SELECT_PASS);
 			stmnt.setString(1, email);
 			ResultSet result = stmnt.executeQuery();
-			if (result.next() && result.getString("password").equals(password)) {
-				session.setAttribute("loggedin", "true");
-				session.setAttribute("userid", result.getInt("account_id"));
+			if (result.next() && result.getString(Info.PASSWORD_LABEL).equals(password)) {
+				session.setAttribute(Info.LOGGED_IN_LABEL, "true");
+				session.setAttribute(Info.ACCOUNT_ID_LABEL, result.getInt(Info.ACCOUNT_ID_LABEL));
+				session.setAttribute(Info.USER_LABEL, result.getString(Info.USER_LABEL));
+				session.setAttribute(Info.EMAIL_LABEL, email);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		response.sendRedirect("/gagmock/main.jsp");
-
 	}
 }

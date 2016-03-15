@@ -14,7 +14,8 @@ import model.account.Account;
 
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
-	private static final String CREATE_ACCOUNT = "insert into account values (null,?,?,?,now());";
+	private static final String CREATE_ACCOUNT = "insert into account values (null,?,?,?,now()"
+			+ ",'/images/avatar/avatar_default.jpg');";
 	private static final long serialVersionUID = 1L;
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -41,6 +42,7 @@ public class RegisterServlet extends HttpServlet {
 			throw new ServletException("Invalid register parameters (username,email,password)=(" + username + ", "
 					+ email + ", " + password + ")");
 		}
+		response.sendRedirect("/gagmock");
 	}
 
 	private static boolean validate(String username, String password, String eMail) {
