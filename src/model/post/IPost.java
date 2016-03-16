@@ -1,12 +1,17 @@
 package model.post;
 
-import model.IKernel;
-import model.account.IAccount;
-import model.comment.IComment;
+public interface IPost {
 
-public interface IPost extends IKernel {
-	
-	boolean delete();
-	
-	void addComment(IAccount commenter,IComment toAdd);
+	int getCreatorID();
+
+	String getPictutePath();
+
+	void setPoints(int points);
+
+	int getPoints();
+
+	String getPostHeader();
+
+	void setPostHeader(String postHeader) throws PostException;
+
 }

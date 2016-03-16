@@ -31,7 +31,7 @@
 		<ul class="dropdown-menu">
 			<li><a href="#">My profile</a></li>
 			<li><a href="#">Settings</a></li>
-			<li><a href="#">Help</a></li>
+			<li><a href="error.jsp?error=No+help+for+you">Help</a></li>
 			<li role="separator" class="divider"></li>
 			<li><a href="/gagmock/logout">Log out</a></li>
 		</ul></li>

@@ -2,6 +2,8 @@ package model.section;
 
 public class SectionException extends Exception {
 
+	private static final long serialVersionUID = -6871038516245572916L;
+
 	public SectionException() {
 		// TODO Auto-generated constructor stub
 	}

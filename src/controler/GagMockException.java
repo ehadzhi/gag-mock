@@ -2,6 +2,8 @@ package controler;
 
 public class GagMockException extends Exception {
 
+	private static final long serialVersionUID = -4812400808989211613L;
+
 	public GagMockException() {
 		// TODO Auto-generated constructor stub
 	}

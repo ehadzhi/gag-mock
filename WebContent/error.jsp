@@ -1,4 +1,4 @@
-
+<%@page import="info.Info"%>
 <!doctype html>
 <html>
 <head>
@@ -20,8 +20,14 @@
 	<header>
 		<jsp:include page="navbar.jsp" />
 	</header>
-
-	<jsp:include page="post-list.jsp" />
+	<div class="container">
+		<div class="col-lg-12">
+			<h1 class="text-center"><%out.print(request.getParameter(Info.ERROR_LABEL)); %></h1>
+			<h2 class="text-center">You're going off rails.</h2>
+			<img src="images/error.png" class="img-responsive center-block"
+				alt="error img">
+		</div>
+	</div>
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script

@@ -13,8 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import info.ErrorInfo;
 import info.Info;
-import jdbc.ConnectionSingleton;
+import jdbc.ConnectionDispatcher;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
@@ -27,7 +28,7 @@ public class LoginServlet extends HttpServlet {
 		String email = request.getParameter(Info.EMAIL_LABEL);
 		String password = request.getParameter(Info.PASSWORD_LABEL);
 		HttpSession session = request.getSession();
-		Connection conn = ConnectionSingleton.getConnection();
+		Connection conn = ConnectionDispatcher.getConnection();
 
 		try {
 			PreparedStatement stmnt = conn.prepareStatement(SELECT_PASS);
@@ -38,10 +39,14 @@ public class LoginServlet extends HttpServlet {
 				session.setAttribute(Info.ACCOUNT_ID_LABEL, result.getInt(Info.ACCOUNT_ID_LABEL));
 				session.setAttribute(Info.USER_LABEL, result.getString(Info.USER_LABEL));
 				session.setAttribute(Info.EMAIL_LABEL, email);
+				session.setMaxInactiveInterval(-1);
+				response.sendRedirect("/gagmock");
+			}
+			else{
+				response.sendRedirect(ErrorInfo.BAD_LOGIN);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		response.sendRedirect("/gagmock/main.jsp");
 	}
 }

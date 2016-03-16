@@ -2,6 +2,8 @@ package model.account;
 
 public class AccountException extends Exception {
 
+	private static final long serialVersionUID = -4480443078706424802L;
+
 	public AccountException() {
 	}
 

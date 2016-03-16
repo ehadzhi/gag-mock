@@ -1,3 +1,4 @@
+<%@page import="info.Info"%>
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -10,7 +11,7 @@
 					class="icon-bar"></span>
 			</button>
 			<img class="navbar-brand" src="./images/sheep-icon.png"
-				alt="Mountain View"> <a class="navbar-brand" href="#">GagMock</a>
+				alt="Mountain View"> <a class="navbar-brand" href="/gagmock">GagMock</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,7 +19,7 @@
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<%
-					String currentPage = (String) request.getSession().getAttribute("currentpage");
+					String currentPage = (String) request.getSession().getAttribute(Info.CURRENT_PAGE_LABEL);
 				%>
 				<li <%if (currentPage.equals("hot")) {%> class="active" <%}%>><a
 					href="navigate?active_page=hot">Hot </a></li>
@@ -39,8 +40,8 @@
 			</ul>
 
 			<%
-				Object isLoggedIn = request.getSession().getAttribute("loggedin");
-				if (isLoggedIn != null && isLoggedIn.equals("true")) {
+				Object isLoggedIn = request.getSession().getAttribute(Info.LOGGED_IN_LABEL);
+				if (isLoggedIn != null && isLoggedIn.equals(Info.TRUE_LABEL)) {
 			%>
 			<jsp:include page="logged-in.jsp" />
 			<%
@@ -50,9 +51,11 @@
 			<%
 				}
 			%>
-			<form class="navbar-form navbar-right" role="search">
+			<form class="navbar-form navbar-right" action="/gagmock/search"
+				role="search" method="get">
 				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search">
+					<input type="text" name="searc-query" class="form-control"
+						placeholder="Search">
 				</div>
 				<button type="submit" class="btn btn-default">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>

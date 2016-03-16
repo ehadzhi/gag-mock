@@ -1,6 +1,6 @@
 package model.section;
 
-public class Section implements ISection{
+public class Section implements ISection {
 	private String name;
 	
 	public Section(String name) throws SectionException {

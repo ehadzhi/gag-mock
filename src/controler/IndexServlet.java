@@ -6,6 +6,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import info.Info;
 
 @WebServlet("/index.html")
 public class IndexServlet extends HttpServlet {
@@ -13,7 +16,10 @@ public class IndexServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getSession().setAttribute("currentpage", "hot");
+		HttpSession session = request.getSession();
+		if (session.isNew()) {
+			session.setAttribute(Info.CURRENT_PAGE_LABEL, "hot");
+		}
 		response.sendRedirect("/gagmock/main.jsp");
 	}
 
