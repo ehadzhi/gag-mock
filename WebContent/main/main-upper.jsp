@@ -4,7 +4,7 @@
 <head>
 <title>GagMock - Jokes die here.</title>
 <link rel="shortcut icon" type="image/x-icon"
-	href="./images/sheep-icon.png" />
+	href="/gagmock/images/sheep-icon.png" />
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
