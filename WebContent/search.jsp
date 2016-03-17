@@ -1,4 +1,4 @@
-<%@page import="info.Info"%>
+
 <!doctype html>
 <html>
 <head>
@@ -16,24 +16,12 @@
 	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
 	crossorigin="anonymous">
 </head>
-<style>
-.modal-backdrop {
-	bottom: 0;
-	z-index: 1020;
-}
-</style>
-<body style="padding-top: 70px">
+<body class="background - white" style="padding-top: 70px">
 	<header>
 		<jsp:include page="navbar.jsp" />
 	</header>
-	<div class="container">
-		<div class="col-lg-12">
-			<h1 class="text-center"><%out.print(request.getParameter(Info.ERROR_LABEL)); %></h1>
-			<h2 class="text-center">You're going off rails.</h2>
-			<img src="images/error.png" class="img-responsive center-block"
-				alt="error img">
-		</div>
-	</div>
+
+	<jsp:include page="post-search-list.jsp" />
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script

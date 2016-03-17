@@ -1,4 +1,4 @@
-<ul class="navbar-right navbar-btn">
+<ul class="navbar-right navbar-btn" style="padding-right: 15px">
 	<button type="button" class="btn btn-primary" data-toggle="modal"
 		data-target=".bs-example-modal-sm1">Sign up</button>
 	<button type="button" class="btn btn-primary" data-toggle="modal"

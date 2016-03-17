@@ -1,3 +1,4 @@
+<%@page import="info.Info"%>
 <ul class="nav navbar-nav navbar-right">
 	<li><a data-toggle="modal" data-target=".bs-example-modal-sm"><span
 			class="glyphicon glyphicon-upload" aria-hidden="true"></span> Upload</a>
@@ -29,8 +30,8 @@
 		aria-expanded="false"><span class="glyphicon glyphicon-user"
 			aria-hidden="true"></span><span class="caret"></span></a>
 		<ul class="dropdown-menu">
-			<li><a href="#">My profile</a></li>
-			<li><a href="#">Settings</a></li>
+			<li><a href="profile.jsp?user_id=<%out.print(session.getAttribute(Info.ACCOUNT_ID_LABEL));%>">My profile</a></li>
+			<li><a href="settings.jsp?settings=account">Settings</a></li>
 			<li><a href="error.jsp?error=No+help+for+you">Help</a></li>
 			<li role="separator" class="divider"></li>
 			<li><a href="/gagmock/logout">Log out</a></li>

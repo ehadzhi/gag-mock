@@ -1,5 +1,5 @@
 <%@page import="info.Info"%>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -51,10 +51,10 @@
 			<%
 				}
 			%>
-			<form class="navbar-form navbar-right" action="/gagmock/search"
+			<form class="navbar-form navbar-right" action="/gagmock/search.jsp"
 				role="search" method="get">
 				<div class="form-group">
-					<input type="text" name="searc-query" class="form-control"
+					<input type="text" name="search-query" class="form-control"
 						placeholder="Search">
 				</div>
 				<button type="submit" class="btn btn-default">

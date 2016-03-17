@@ -15,8 +15,14 @@
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
 	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
 	crossorigin="anonymous">
+<style>
+.modal-backdrop {
+	bottom: 0;
+	z-index: 1020;
+}
+</style>
 </head>
-<body>
+<body class="background - white" style="padding-top: 70px">
 	<header>
 		<jsp:include page="navbar.jsp" />
 	</header>
