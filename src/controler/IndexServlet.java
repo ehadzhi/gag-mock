@@ -20,7 +20,7 @@ public class IndexServlet extends HttpServlet {
 		if (session.isNew()) {
 			session.setAttribute(Info.CURRENT_PAGE_LABEL, "hot");
 		}
-		response.sendRedirect("/gagmock/main.jsp");
+		response.sendRedirect("/gagmock/main/main.jsp");
 	}
 
 }

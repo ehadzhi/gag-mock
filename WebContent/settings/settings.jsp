@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 <head>
@@ -15,13 +14,28 @@
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
 	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
 	crossorigin="anonymous">
+<style>
+.modal-backdrop {
+	bottom: 0;
+	z-index: 1020;
+}
+</style>
 </head>
 <body class="background - white" style="padding-top: 70px">
 	<header>
-		<jsp:include page="navbar.jsp" />
+		<jsp:include page="/navbar/navbar.jsp" />
 	</header>
-
-	<jsp:include page="post-search-list.jsp" />
+	<%
+		if (request.getParameter("settings").equals("account")) {
+	%>
+	<jsp:include page="account-settings.jsp" />
+	<%
+		} else {
+	%>
+	<jsp:include page="password-settings.jsp" />
+	<%
+		}
+	%>
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script

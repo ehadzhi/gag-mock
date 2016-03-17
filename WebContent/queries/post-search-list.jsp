@@ -11,12 +11,10 @@
 	Statement stmt = con.createStatement();
 	String query = request.getParameter("search-query");
 	query = (" " + query + " ").replace(' ', '%');
-	ResultSet res = stmt.executeQuery(
-	"select * from post where post_header like '"
-					+ query + "' order by points desc;");
+	ResultSet res = stmt
+			.executeQuery("select * from post where post_header like '" + query + "' order by points desc;");
 	while (res.next()) {
 %>
-
 <div class="container">
 	<div class="col-lg-7 col-md-7 col-sm-12">
 		<h1>
@@ -26,7 +24,7 @@
 				%>
 			
 		</h1>
-		<img src="post/<%out.print(res.getString("picture_path"));%>"
+		<img src="/gagmock<%out.print(res.getString("picture_path"));%>"
 			class="img-responsive" alt="img">
 		<p></p>
 		<button type="button" class="btn btn-link btn-xs">
@@ -53,7 +51,6 @@
 		<hr></hr>
 	</div>
 </div>
-
 <%
 	}
 %>

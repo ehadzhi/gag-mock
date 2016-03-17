@@ -10,7 +10,7 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<img class="navbar-brand" src="./images/sheep-icon.png"
+			<img class="navbar-brand" src="/gagmock/images/sheep-icon.png"
 				alt="Mountain View"> <a class="navbar-brand" href="/gagmock">GagMock</a>
 		</div>
 
@@ -22,9 +22,9 @@
 					String currentPage = (String) request.getSession().getAttribute(Info.CURRENT_PAGE_LABEL);
 				%>
 				<li <%if (currentPage.equals("hot")) {%> class="active" <%}%>><a
-					href="navigate?active_page=hot">Hot </a></li>
+					href="/gagmock/navigate?active_page=hot">Hot </a></li>
 				<li <%if (currentPage.equals("fresh")) {%> class="active" <%}%>><a
-					href="navigate?active_page=fresh">Fresh</a></li>
+					href="/gagmock/navigate?active_page=fresh">Fresh</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">More <span class="caret"></span></a>
@@ -51,7 +51,7 @@
 			<%
 				}
 			%>
-			<form class="navbar-form navbar-right" action="/gagmock/search.jsp"
+			<form class="navbar-form navbar-right" action="/gagmock/queries/search.jsp"
 				role="search" method="get">
 				<div class="form-group">
 					<input type="text" name="search-query" class="form-control"

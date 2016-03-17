@@ -22,15 +22,7 @@
 }
 </style>
 </head>
-<body class="background - white" style="padding-top: 70px">
+<body class="background - white" style="padding-top: 50px">
 	<header>
-		<jsp:include page="navbar.jsp" />
+		<jsp:include page="/navbar/navbar.jsp" />
 	</header>
-
-	<jsp:include page="post-list.jsp" />
-	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script
-		src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</body>
-</html>
