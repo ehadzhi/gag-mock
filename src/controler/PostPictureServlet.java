@@ -23,11 +23,9 @@ public class PostPictureServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		ServletOutputStream out;
-		out = response.getOutputStream();
+		ServletOutputStream out = response.getOutputStream();
 		String url = request.getRequestURL().toString();
 		url = url.substring(url.lastIndexOf("/"));
-		System.out.println(url);
 		FileInputStream fin = new FileInputStream(Info.STORAGE_PATH + FOLDER_SUB_PATH + url);
 
 		BufferedInputStream bin = new BufferedInputStream(fin);

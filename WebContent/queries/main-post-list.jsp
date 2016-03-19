@@ -20,7 +20,7 @@
 <div class="container">
 	<div class="col-lg-7 col-md-7 col-sm-12">
 		<h1>
-			<a href="/gagmock/post?post_id=<%out.print(res.getInt("post_id"));%>">
+			<a href="/gagmock<%out.print(res.getString("picture_path"));%>">
 				<%
 					out.print(res.getString("post_header"));
 				%>
